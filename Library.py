@@ -49,5 +49,32 @@ class Library:
     class MenuLib:
         def __init__(self, library):
             self.library = library
-        
+        def run(self):
+            while True:
+                print("1. Add book")
+                print("2. Add member")
+                print("3. Issue Book")
+                print("4. Return book")
+                print("5. Exit")
+                choice = input("Enter your choice: ")
+                if choice == "1":
+                    Bno = input("Enter book number: ")
+                    title = input("Enter book title: ")
+                    self.library.add_book(Bno, title)
+                elif choice == "2":
+                    id = input("Enter member id: ")
+                    name = input("Enter member name: ")
+                    self.library.add_member(Member(id, name))
+                elif choice == "3":
+                    Bno = input("Enter book number: ")
+                    member_id = input("Enter member id: ")
+                    self.library.issue_book(Bno, member_id)
+                elif choice == "4":
+                    Bno = input("Enter book number: ")
+                    self.library.return_book(Bno)
+                elif choice == "5":
+                    break
+Library = Library()
+menu = MenuLib(Library)
+menu.run()
 
