@@ -1,4 +1,4 @@
-# Library Management System
+# Library Management System 📚
 
 ## About the Project
 The Library Management System is designed for ABC School to manage the library services offered to students and teachers. The system allows the library to maintain a record of all books and manage the issuance of books to students and teachers.
